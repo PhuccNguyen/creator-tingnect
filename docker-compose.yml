@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # TingVote Creator Lab Application
+  tingvote-creator-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tingvote-creator-lab
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    networks:
+      - tingvote-network
+    restart: unless-stopped
+    volumes:
+      # Optional: Mount for logs (uncomment if needed)
+      # - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Development version (uncomment for development)
+  # tingvote-dev:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   container_name: tingvote-creator-lab-dev
+  #   ports:
+  #     - "3001:3000"
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - NODE_ENV=development
+  #   networks:
+  #     - tingvote-network
+  #   command: npm run dev
+
+networks:
+  tingvote-network:
+    driver: bridge

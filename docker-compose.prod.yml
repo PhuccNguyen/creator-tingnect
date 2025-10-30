@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  # TingVote Creator Lab Production
+  tingvote-creator-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: creator-tingnect
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    networks:
+      - creator-network
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.creator.rule=Host(`creator.tingnect.com`)"
+      - "traefik.http.routers.creator.tls=true"
+      - "traefik.http.routers.creator.tls.certresolver=letsencrypt"
+      - "traefik.http.services.creator.loadbalancer.server.port=3000"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Nginx Reverse Proxy (Alternative to Traefik)
+  nginx:
+    image: nginx:alpine
+    container_name: creator-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - tingvote-creator-lab
+    networks:
+      - creator-network
+    restart: unless-stopped
+    profiles:
+      - nginx
+
+  # Traefik Reverse Proxy with SSL
+  traefik:
+    image: traefik:v3.0
+    container_name: creator-traefik
+    command:
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=admin@tingnect.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"  # Traefik dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+    networks:
+      - creator-network
+    restart: unless-stopped
+    profiles:
+      - traefik
+
+networks:
+  creator-network:
+    driver: bridge
+
+volumes:
+  letsencrypt:
+    driver: local

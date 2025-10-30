@@ -1,0 +1,624 @@
+/* Mobile-first Registration Section */
+.registration {
+  padding: 3rem 1rem;
+  background: #0A0A0F;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 10%, #E7C87320 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, #2AF4FF15 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 70%, #10B98115 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 90%, #8B5CF615 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA Hero Section */
+.ctaHero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(231, 200, 115, 0.1);
+  border: 1px solid rgba(231, 200, 115, 0.3);
+  color: #E7C873;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(231, 200, 115, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(231, 200, 115, 0);
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #E7C873, #2AF4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Benefits Grid */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.benefitCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefitCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(231, 200, 115, 0.5), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.benefitCard:hover::before {
+  transform: translateX(100%);
+}
+
+.benefitCard:hover {
+  border-color: rgba(231, 200, 115, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.benefitIcon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefitEmoji {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 0.875rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefitContent {
+  text-align: center;
+}
+
+.benefitTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 0.5rem;
+}
+
+.benefitAmount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(135deg, #E7C873, #2AF4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.benefitDescription {
+  font-size: 0.875rem;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Urgency Section */
+.urgencySection {
+  margin-bottom: 3rem;
+}
+
+.urgencyCard {
+  background: rgba(231, 200, 115, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(231, 200, 115, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.urgencyCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(231, 200, 115, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.urgencyHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.urgencyIcon {
+  color: #E7C873;
+}
+
+.urgencyTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.urgencyPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.urgencyPoint {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pointIcon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: rgba(231, 200, 115, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E7C873;
+  flex-shrink: 0;
+}
+
+.pointEmoji {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 0.625rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointText {
+  font-size: 0.875rem;
+  color: #CBD5E1;
+  line-height: 1.4;
+}
+
+/* Steps Section */
+.stepsSection {
+  margin-bottom: 3rem;
+}
+
+.stepsTitle {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stepCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stepCard:hover {
+  border-color: rgba(231, 200, 115, 0.2);
+}
+
+.stepNumber {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #E7C873, #D4B560);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 auto 0.5rem;
+}
+
+.stepIcon {
+  color: #E7C873;
+  margin-bottom: 0.5rem;
+}
+
+.stepText {
+  font-size: 0.875rem;
+  color: #CBD5E1;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* CTA Section */
+.ctaSection {
+  margin-bottom: 3rem;
+}
+
+.ctaCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(231, 200, 115, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(231, 200, 115, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.ctaIcon {
+  color: #E7C873;
+  margin-bottom: 1rem;
+}
+
+.ctaTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+
+.ctaText {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #E7C873, #D4B560);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(231, 200, 115, 0.3);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #F4D584, #E7C873);
+  box-shadow: 0 6px 25px rgba(231, 200, 115, 0.4);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* Testimonial Section */
+.testimonialSection {
+  margin-bottom: 2rem;
+}
+
+.testimonialCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.testimonialContent {
+  text-align: center;
+}
+
+.testimonialIcon {
+  color: #E7C873;
+  margin-bottom: 1rem;
+}
+
+.quote {
+  font-size: 0.875rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 2rem;
+  color: #E7C873;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.quote::after {
+  content: '"';
+  font-size: 2rem;
+  color: #E7C873;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.authorInfo strong {
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.authorInfo span {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.earnings {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #10B981;
+}
+
+/* Tablet */
+@media (min-width: 48rem) {
+  .registration {
+    padding: 4rem 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    max-width: 600px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .urgencyCard {
+    padding: 2rem;
+  }
+
+  .urgencyPoints {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stepsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ctaCard {
+    padding: 2.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 64rem) {
+  .registration {
+    padding: 5rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .benefitsGrid {
+    gap: 2rem;
+  }
+
+  .benefitCard {
+    padding: 2rem;
+  }
+
+  .benefitIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .benefitAmount {
+    font-size: 2.5rem;
+  }
+
+  .urgencyCard {
+    padding: 2.5rem;
+  }
+
+  .urgencyPoints {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 90rem) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .registration {
+    padding: 6rem 2rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+}
