@@ -212,7 +212,7 @@ const Header = () => {
               <UserPlus size={18} />
               <span className={styles.ctaText}>
                 <span className={styles.ctaTextDesktop}>Đăng ký nhận thưởng</span>
-                <span className={styles.ctaTextMobile}>Đăng ký</span>
+                <span className={styles.ctaTextMobile}>Nhận Thưởng</span>
               </span>
               <div className={styles.ctaBadge}>50K</div>
             </motion.button>

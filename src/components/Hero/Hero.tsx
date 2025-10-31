@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Sáng tạo nội dung, nhận thưởng thật từ lượt vote!
+            Sáng Tạo Nội Dung - Nhận Thưởng Không Giới Hạn!
           </motion.p>
 
           <motion.div 
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Gift size={20} />
-              <span>Đăng ký ngay qua Google Form</span>
+              <span>Đăng ký Nhận Thưởng Ngay</span>
               <ArrowRight size={18} />
             </motion.button>
 

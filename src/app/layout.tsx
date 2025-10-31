@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://creator.tingnect.com'),
   title: {
     default: 'Creator Labs - Chương trình sáng tạo nội dung',
     template: '%s | Creator Labs'
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'Creator Labs',
     images: [
       {
-        url: '/Image/logo/TingNect icon.png',
+        url: '/Image/logo/tingnect-logo.png',
         width: 1200,
         height: 630,
         alt: 'Creator Labs - TingNect',
@@ -46,18 +47,18 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Creator Labs - Chương trình sáng tạo nội dung',
     description: 'Tham gia Creator Labs - Nhận thưởng 50.000đ ngay khi đăng ký. Học kỹ năng tạo nội dung, nhận chia sẻ 20% doanh thu và phần thưởng hàng tuần hấp dẫn.',
-    images: ['/Image/logo/TingNect icon.png'],
+    images: ['/Image/logo/tingnect-logo.png'],
     creator: '@tingnect',
   },
   
   // Icons
   icons: {
-    icon: '/Image/logo/TingNect icon.png',
-    shortcut: '/Image/logo/TingNect icon.png',
-    apple: '/Image/logo/TingNect icon.png',
+    icon: '/Image/logo/Icon TingVote.png',
+    shortcut: '/Image/logo/Icon TingVote.png',
+    apple: '/Image/logo/Icon TingVote.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/Image/logo/TingNect icon.png',
+      url: '/Image/logo/Icon TingVote.png',
     },
   },
   
@@ -145,7 +146,7 @@ export default function RootLayout({
         <meta name="msapplication-config" content="/browserconfig.xml" />
         
         {/* Preload important resources */}
-        <link rel="preload" href="/Image/logo/TingNect icon.png" as="image" />
+        <link rel="preload" href="/Image/logo/Icon TingVote.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
@@ -162,7 +163,7 @@ export default function RootLayout({
               "name": "Creator Labs",
               "alternateName": "TingNect Creator Labs",
               "url": "https://creator.tingnect.com",
-              "logo": "https://creator.tingnect.com/Image/logo/TingNect icon.png",
+              "logo": "https://creator.tingnect.com/Image/logo/tingnect-logo.png",
               "description": "Chương trình đào tạo Creator chuyên nghiệp với phần thưởng hấp dẫn",
               "sameAs": [
                 "https://facebook.com/tingnect",
