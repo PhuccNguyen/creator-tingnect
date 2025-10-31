@@ -36,10 +36,10 @@ const Steps: React.FC = () => {
       time: '10 phút',
       color: '#E7C873',
       details: [
-        'Điền thông tin đăng ký qua Google Form TingVote Creator Lab',
+        'Điền thông tin đăng ký qua Google Form Creator Labs',
         'Hoàn thiện hồ sơ cá nhân (ảnh đại diện, mô tả ngắn, liên kết mạng xã hội)',
         'Follow toàn bộ các kênh chính thức của TingVote (Facebook, TikTok, Instagram, YouTube)',
-        'Tham gia cộng đồng TingVote Creator Lab trên Facebook'
+        'Tham gia cộng đồng Creator Labs trên Facebook'
       ],
       goal: '🎁 Sau khi hoàn tất, liên hệ fanpage TingVote để nhận thưởng 50.000đ'
     },

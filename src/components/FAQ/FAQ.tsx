@@ -43,7 +43,7 @@ const FAQ: React.FC = () => {
       icon: Users,
       emoji: '👥',
       question: 'Tôi chưa có nhiều người theo dõi, có thể tham gia không?',
-      answer: 'Hoàn toàn có thể! TingVote Creator Lab chào đón mọi cá nhân yêu thích sáng tạo, dù là người mới hay Creator chuyên nghiệp. Chúng tôi sẽ hỗ trợ bạn phát triển từ đầu.',
+      answer: 'Hoàn toàn có thể! Creator Labs chào đón mọi cá nhân yêu thích sáng tạo, dù là người mới hay Creator chuyên nghiệp. Chúng tôi sẽ hỗ trợ bạn phát triển từ đầu.',
       color: '#2AF4FF'
     },
     {

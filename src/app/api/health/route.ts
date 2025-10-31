@@ -6,7 +6,7 @@ export async function GET() {
     const healthCheck = {
       status: 'OK',
       timestamp: new Date().toISOString(),
-      service: 'TingVote Creator Lab',
+      service: 'Creator Labs',
       version: '1.0.0',
       environment: process.env.NODE_ENV || 'development',
     };

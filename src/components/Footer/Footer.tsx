@@ -216,7 +216,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className={styles.copyright}>
-              <span>© {new Date().getFullYear()} TingVote Creator Lab</span>
+              <span>© {new Date().getFullYear()} Creator Labs</span>
               <span className={styles.separator}>•</span>
               <span>Tất cả quyền được bảo lưu</span>
             </div>

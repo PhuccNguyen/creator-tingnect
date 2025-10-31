@@ -1,10 +1,10 @@
-# 🎬 TingVote Creator Lab - Landing Page
+# 🎬 Creator Labs - Landing Page
 
-> **Modern, responsive landing page for TingVote Creator Lab program**  
+> **Modern, responsive landing page for Creator Labs program**  
 > **Live Demo**: [creator.tingnect.com](https://creator.tingnect.com)  
 > **Built with**: Next.js 16 + TypeScript + Docker + Mobile-First Design
 
-![TingVote Creator Lab](https://img.shields.io/badge/TingVote-Creator%20Lab-E7C873?style=for-the-badge&logo=react)
+![Creator Labs](https://img.shields.io/badge/Creator-Labs-E7C873?style=for-the-badge&logo=react)
 ![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)
@@ -30,7 +30,7 @@
 - ✅ **TypeScript** for type safety
 - ✅ **Docker Ready** for easy deployment
 
-### 🎯 **TingVote Creator Lab Program**
+### 🎯 **Creator Labs Program**
 - 🎁 **50,000đ Sign-up Bonus** for eligible participants
 - 🎬 **Content Creation Training** with expert guidance
 - 📊 **Real-time Analytics** tracking views, votes, revenue
