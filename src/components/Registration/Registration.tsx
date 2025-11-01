@@ -2,24 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Gift, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Users,
-  Star,
-  Rocket,
-  Zap,
-  Target,
-  Infinity,
-  CheckCircle,
-  Sparkles,
-  TrendingUp,
-  Award,
-  Heart
-} from 'lucide-react';
-import styles from './Registration.module.css';
+import { Gift, CheckCircle, ExternalLink, Zap, Users } from 'lucide-react';
+import styles from './Registration_new.module.css';
 
 const Registration: React.FC = () => {
   const handleRegisterClick = () => {
@@ -27,255 +11,124 @@ const Registration: React.FC = () => {
   };
 
   const benefits = [
-    {
-      icon: Gift,
-      emoji: '🎁',
-      title: 'Thưởng khởi đầu',
-      amount: '50K',
-      description: 'Ngay khi đăng ký',
-      color: '#E7C873'
-    },
-    {
-      icon: DollarSign,
-      emoji: '💰',
-      title: 'Chia thưởng',
-      amount: '20%',
-      description: 'Doanh thu từ vote',
-      color: '#10B981'
-    },
-    {
-      icon: TrendingUp,
-      emoji: '📈',
-      title: 'Phát triển',
-      amount: '∞',
-      description: 'Không giới hạn',
-      color: '#2AF4FF'
-    }
-  ];
-
-  const urgencyPoints = [
-    { icon: Gift, emoji: '🎁', text: 'Nhận ngay 50.000đ khi đăng ký thành công' },
-    { icon: Users, emoji: '👥', text: 'Chỉ giới hạn 100 Creator đầu tiên' },
-    { icon: Clock, emoji: '⏰', text: 'Ưu tiên Creator đăng ký sớm' },
-    { icon: Rocket, emoji: '🚀', text: 'Bắt đầu kiếm thu nhập từ ngày đầu' }
-  ];
-
-  const steps = [
-    { number: 1, text: 'Điền form (2 phút)', icon: Target },
-    { number: 2, text: 'Follow kênh TingVote', icon: Heart },  
-    { number: 3, text: 'Tham gia cộng đồng', icon: Users },
-    { number: 4, text: 'Nhận thưởng 50K', icon: Gift }
+    { icon: '🎁', text: 'Miễn phí 100% - Không tốn bất kỳ chi phí nào' },
+    { icon: '⚡', text: 'Nhận 50K thưởng trong vòng 24 giờ' },
+    { icon: '🎯', text: 'Truy cập miễn phí công cụ trị giá 33.28 Triệu' },
+    { icon: '💰', text: 'Chia 20% doanh thu - Kiếm tiền không giới hạn' }
   ];
 
   return (
-    <section className={styles.registration}>
+    <section id="registration" className={styles.registration}>
       <div className={styles.container}>
-        {/* Hero Section */}
+        {/* Main Card */}
         <motion.div 
-          className={styles.hero}
-          initial={{ opacity: 0, y: 30 }}
+          className={styles.card}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
+          {/* Icon Circle */}
           <motion.div 
-            className={styles.badge}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            className={styles.iconCircle}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5, type: 'spring' }}
             viewport={{ once: true }}
           >
-            <Star size={16} />
-            <span>Ưu đãi đặc biệt</span>
+            <Gift size={56} strokeWidth={2.5} />
           </motion.div>
 
+          {/* Title */}
           <motion.h2 
             className={styles.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Sẵn sàng trở thành{' '}
-            <span className={styles.highlight}>Creator?</span>
+            Sẵn sàng nhận <span className={styles.highlight}>Gói 39 Triệu</span><br />
+            và bắt đầu kiếm tiền ngay hôm nay?
           </motion.h2>
 
+          {/* Description */}
           <motion.p 
             className={styles.description}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Đăng ký ngay để nhận thưởng 50K và bắt đầu kiếm thu nhập từ nội dung sáng tạo!
+            Chỉ mất <strong>2 phút</strong> để đăng ký. Nhận ngay <strong className={styles.moneyHighlight}>50K thưởng</strong> và bắt đầu hành trình kiếm thu nhập từ nội dung sáng tạo!
           </motion.p>
-        </motion.div>
 
-        {/* Benefits Grid */}
-        <div className={styles.benefitsGrid}>
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <motion.div
+          {/* Benefits Grid */}
+          <motion.div 
+            className={styles.benefits}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {benefits.map((benefit, index) => (
+              <motion.div 
                 key={index}
-                className={styles.benefitCard}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + (index * 0.1) }}
+                className={styles.benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -4, scale: 1.02 }}
               >
-                <div 
-                  className={styles.benefitIcon}
-                  style={{ backgroundColor: `${benefit.color}15` }}
-                >
-                  <Icon size={24} style={{ color: benefit.color }} />
-                  <span className={styles.benefitEmoji}>{benefit.emoji}</span>
+                <div className={styles.benefitIcon}>
+                  <span>{benefit.icon}</span>
+                  <CheckCircle size={16} className={styles.checkIcon} />
                 </div>
-                
-                <div className={styles.benefitContent}>
-                  <h3 className={styles.benefitTitle}>{benefit.title}</h3>
-                  <div className={styles.benefitAmount}>{benefit.amount}</div>
-                  <p className={styles.benefitDescription}>{benefit.description}</p>
-                </div>
+                <span className={styles.benefitText}>{benefit.text}</span>
               </motion.div>
-            );
-          })}
-        </div>
+            ))}
+          </motion.div>
 
-        {/* Urgency Section */}
-        <motion.div 
-          className={styles.urgencySection}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className={styles.urgencyCard}>
-            <div className={styles.urgencyHeader}>
-              <Zap className={styles.urgencyIcon} size={24} />
-              <h3 className={styles.urgencyTitle}>Chỉ dành cho 100 Creator đầu tiên!</h3>
+          {/* CTA Button */}
+          <motion.button
+            className={styles.ctaButton}
+            onClick={handleRegisterClick}
+            whileHover={{ scale: 1.03, y: -3 }}
+            whileTap={{ scale: 0.98 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Gift size={28} strokeWidth={2.5} />
+            <div className={styles.buttonContent}>
+              <div className={styles.buttonMain}>ĐĂNG KÝ MIỄN PHÍ NGAY</div>
+              <div className={styles.buttonSub}>Nhận Gói 39 Triệu + 50K Thưởng</div>
             </div>
-            
-            <div className={styles.urgencyPoints}>
-              {urgencyPoints.map((point, index) => {
-                const Icon = point.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className={styles.urgencyPoint}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 + (index * 0.1) }}
-                    viewport={{ once: true }}
-                  >
-                    <div className={styles.pointIcon}>
-                      <Icon size={16} />
-                      <span className={styles.pointEmoji}>{point.emoji}</span>
-                    </div>
-                    <span className={styles.pointText}>{point.text}</span>
-                  </motion.div>
-                );
-              })}
+            <ExternalLink size={22} />
+          </motion.button>
+
+          {/* Trust Badges */}
+          <motion.div 
+            className={styles.trustBadges}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.badge}>
+              <Users size={18} />
+              <span><strong>87 Creator</strong> đã tham gia</span>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Steps Section */}
-        <motion.div 
-          className={styles.stepsSection}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          viewport={{ once: true }}
-        >
-          <h3 className={styles.stepsTitle}>4 bước đơn giản để bắt đầu:</h3>
-          
-          <div className={styles.stepsGrid}>
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className={styles.stepCard}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className={styles.stepNumber}>{step.number}</div>
-                  <Icon size={20} className={styles.stepIcon} />
-                  <span className={styles.stepText}>{step.text}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className={styles.ctaSection}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          viewport={{ once: true }}
-        >
-          <div className={styles.ctaCard}>
-            <Rocket className={styles.ctaIcon} size={32} />
-            
-            <h3 className={styles.ctaTitle}>
-              Đừng để cơ hội trôi qua!
-            </h3>
-            
-            <p className={styles.ctaText}>
-              Mỗi ngày chậm trễ là mỗi ngày bạn mất cơ hội kiếm thu nhập từ đam mê sáng tạo
-            </p>
-
-            <motion.button
-              className={styles.ctaButton}
-              onClick={handleRegisterClick}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Gift size={20} />
-              <span>Đăng ký nhận 50K ngay!</span>
-              <ArrowRight size={18} />
-            </motion.button>
-
-            <div className={styles.guarantee}>
-              <CheckCircle size={16} />
-              <span>100% miễn phí • Nhận thưởng trong 24h • Hỗ trợ 24/7</span>
+            <div className={styles.badge}>
+              <Zap size={18} />
+              <span>Chỉ còn <strong>13 suất</strong> cuối!</span>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Testimonial Section */}
-        <motion.div 
-          className={styles.testimonialSection}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.7 }}
-          viewport={{ once: true }}
-        >
-          <div className={styles.testimonialCard}>
-            <div className={styles.testimonialContent}>
-              <Award className={styles.testimonialIcon} size={24} />
-              
-              <blockquote className={styles.quote}>
-                "Tôi đã kiếm được 2 triệu đồng chỉ trong tháng đầu tiên. 
-                TingVote thực sự giúp tôi biến đam mê thành thu nhập!"
-              </blockquote>
-              
-              <div className={styles.author}>
-                <div className={styles.authorInfo}>
-                  <strong>Nguyễn Thị Quỳnh Anh</strong>
-                  <span>Creator từ tháng 08/2025</span>
-                </div>
-                <div className={styles.earnings}>+6M VNĐ/tháng</div>
-              </div>
-            </div>
-          </div>
+          {/* Security Notice */}
+          <p className={styles.securityNote}>
+            🔒 Thông tin của bạn được bảo mật 100% | ⚡ Duyệt trong vòng 24h
+          </p>
         </motion.div>
       </div>
     </section>

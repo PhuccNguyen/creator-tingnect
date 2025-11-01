@@ -151,8 +151,7 @@ const Steps: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Quy trình tham gia{' '}
-            <span className={styles.highlight}>(6 bước rõ ràng)</span>
+            Chỉ cần <span className={styles.highlight}>6 bước đơn giản</span>
           </motion.h2>
 
           <motion.p 
@@ -162,7 +161,7 @@ const Steps: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Quy trình đơn giản để bắt đầu kiếm thu nhập từ nội dung sáng tạo
+            Để nhận <span className={styles.highlight}>Gói 39 Triệu</span> và bắt đầu kiếm thu nhập từ nội dung sáng tạo
           </motion.p>
         </motion.div>
 
@@ -273,22 +272,28 @@ const Steps: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className={styles.ctaCard}>
-            <Gift className={styles.ctaIcon} size={32} />
+            <div className={styles.ctaIconCircle}>
+              <Gift size={36} />
+            </div>
             <h3 className={styles.ctaTitle}>
-              Sẵn sàng bắt đầu hành trình Creator?
+              Đơn giản vậy thôi! Bắt đầu ngay từ <span className={styles.ctaHighlight}>Bước 1</span>
             </h3>
             <p className={styles.ctaText}>
-              Làm theo 6 bước đơn giản để trở thành Creator và bắt đầu kiếm thu nhập từ nội dung sáng tạo!
+              Hoàn thành 6 bước và nhận toàn bộ <strong>Gói Quyền Lợi 39 Triệu</strong> ngay hôm nay!
             </p>
             
             <motion.button
               className={styles.ctaButton}
               onClick={handleRegisterClick}
-              whileHover={{ scale: 1.05, y: -2 }}
+              whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Bắt đầu ngay - Bước 1</span>
-              <ArrowRight size={18} />
+              <Gift size={24} />
+              <div className={styles.ctaButtonContent}>
+                <span className={styles.ctaButtonMain}>ĐĂNG KÝ NGAY</span>
+                <span className={styles.ctaButtonSub}>Nhận Gói 39 Triệu</span>
+              </div>
+              <ArrowRight size={22} />
             </motion.button>
           </div>
         </motion.div>

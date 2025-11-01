@@ -28,44 +28,58 @@ const FAQ: React.FC = () => {
     {
       icon: Gift,
       emoji: '🎁',
-      question: 'Khi nào tôi nhận được thưởng 50.000đ?',
-      answer: 'Ngay sau khi hoàn tất đăng ký qua Google Form và xác nhận qua fanpage TingVote. Bạn chỉ cần gửi tin nhắn đến fanpage với thông tin đăng ký để nhận thưởng.',
-      color: '#E7C873'
+      question: 'Gói 39.5 Triệu có thực sự miễn phí không?',
+      answer: 'Có! Bạn nhận MIỄN PHÍ: Thưởng 50K tiền mặt + Gói Vote 200K + Hỗ trợ Truyền thông 5.95M. Riêng Gói Tool AI (33.28M) bạn chỉ trả phí kích hoạt 689K thay vì giá gốc 33.97M - tiết kiệm 98%!',
+      color: '#F59E0B'
+    },
+    {
+      icon: CreditCard,
+      emoji: '💰',
+      question: 'Khi nào tôi nhận được 50.000đ tiền thưởng?',
+      answer: 'Ngay sau khi hoàn tất 4 bước: (1) Đăng ký qua form, (2) Hoàn thiện hồ sơ, (3) Follow các kênh TingVote, (4) Tham gia group Creator Lab. Sau đó liên hệ fanpage TingVote để xác nhận và nhận thưởng vào ví.',
+      color: '#10B981'
     },
     {
       icon: Percent,
-      emoji: '💰',
-      question: 'Làm sao để nhận chia thưởng 20%?',
-      answer: 'Hệ thống tự động tính và phân bổ 20% doanh thu từ lượt vote có trả phí vào ví Creator của bạn. Bạn không cần làm gì thêm, chỉ cần tập trung sáng tạo nội dung và thu hút lượt vote.',
-      color: '#10B981'
+      emoji: '�',
+      question: 'Cơ chế chia thưởng 20% hoạt động như thế nào?',
+      answer: 'Mỗi lượt vote trả phí của fan cho bạn, TingVote tự động tính và chuyển 20% doanh thu vào ví Creator của bạn. Minh bạch, tự động, không giới hạn số lần nhận thưởng!',
+      color: '#E7C873'
     },
     {
       icon: Users,
       emoji: '👥',
-      question: 'Tôi chưa có nhiều người theo dõi, có thể tham gia không?',
-      answer: 'Hoàn toàn có thể! Creator Labs chào đón mọi cá nhân yêu thích sáng tạo, dù là người mới hay Creator chuyên nghiệp. Chúng tôi sẽ hỗ trợ bạn phát triển từ đầu.',
-      color: '#2AF4FF'
+      question: 'Tôi chưa có follower, có được tham gia không?',
+      answer: 'Tất nhiên! Creator Lab dành cho MỌI NGƯỜI - từ người mới bắt đầu đến Creator chuyên nghiệp. Chúng tôi có mentor, cộng đồng và công cụ hỗ trợ bạn phát triển từ con số 0.',
+      color: '#3B82F6'
     },
     {
       icon: Smartphone,
-      emoji: '📱',
-      question: 'Tôi cần chuẩn bị gì trước khi đăng ký?',
-      answer: 'Bạn chỉ cần có tài khoản mạng xã hội (Facebook, TikTok, Instagram hoặc YouTube), đam mê sáng tạo nội dung và sẵn sàng học hỏi. Phần còn lại, TingVote sẽ hỗ trợ bạn!',
+      emoji: '🎬',
+      question: 'Tôi cần tạo nội dung gì để nhận vote?',
+      answer: 'Bất kỳ nội dung nào bạn đam mê: video TikTok/Reels, bài viết Facebook, livestream, vlog YouTube... Chỉ cần giới thiệu bản thân, kêu gọi vote và gắn link bình chọn của bạn!',
       color: '#8B5CF6'
+    },
+    {
+      icon: Infinity,
+      emoji: '🚀',
+      question: 'Có giới hạn thu nhập từ vote không?',
+      answer: 'KHÔNG! Bạn nhận 20% KHÔNG GIỚI HẠN từ mỗi lượt vote trả phí. Càng nhiều fan ủng hộ, càng nhiều thu nhập. Top Creator có thể kiếm hàng chục triệu mỗi tháng!',
+      color: '#DC2626'
     },
     {
       icon: CreditCard,
       emoji: '💳',
-      question: 'Tôi có thể rút tiền thưởng như thế nào?',
-      answer: 'Số tiền thưởng sẽ được chuyển vào ví của bạn. Bạn có thể rút tiền theo chu kỳ thanh toán định kỳ của hệ thống hoặc khi đạt ngưỡng tối thiểu.',
-      color: '#F59E0B'
+      question: 'Làm sao để rút tiền thưởng?',
+      answer: 'Tiền thưởng tự động vào Ví Creator TingVote. Bạn có thể rút về tài khoản ngân hàng khi đạt ngưỡng tối thiểu (thường 100K-500K) theo chu kỳ định kỳ hàng tuần/tháng.',
+      color: '#059669'
     },
     {
-      icon: Infinity,
-      emoji: '♾️',
-      question: 'Có giới hạn về số lượng nội dung tôi có thể tạo không?',
-      answer: 'Không có giới hạn! Bạn càng sáng tạo nhiều nội dung chất lượng, càng có nhiều cơ hội thu hút vote và tăng thu nhập. TingVote khuyến khích sự sáng tạo không giới hạn.',
-      color: '#DC2626'
+      icon: MessageCircle,
+      emoji: '📱',
+      question: 'Tôi cần hỗ trợ thì liên hệ ai?',
+      answer: 'Fanpage TingVote hỗ trợ 24/7! Ngoài ra, bạn còn có cộng đồng Creator Lab trên Facebook với hàng trăm Creator và Mentor sẵn sàng giúp đỡ, chia sẻ kinh nghiệm.',
+      color: '#2AF4FF'
     }
   ];
 
@@ -102,8 +116,8 @@ const FAQ: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Câu hỏi{' '}
-            <span className={styles.highlight}>thường gặp</span>
+            Giải đáp{' '}
+            <span className={styles.highlight}>mọi thắc mắc</span>
           </motion.h2>
 
           <motion.p 
@@ -113,7 +127,7 @@ const FAQ: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Xử lý các rào cản và thắc mắc cuối cùng của bạn
+            Những câu hỏi quan trọng về <span className={styles.highlight}>Gói 39 Triệu</span> và cách kiếm thu nhập
           </motion.p>
         </motion.div>
 
@@ -177,30 +191,36 @@ const FAQ: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className={styles.contactCard}>
-            <MessageCircle className={styles.contactIcon} size={32} />
+            <div className={styles.contactIconCircle}>
+              <MessageCircle size={36} />
+            </div>
             
             <h3 className={styles.contactTitle}>
-              Vẫn còn thắc mắc?
+              Còn câu hỏi nào khác? <span className={styles.contactHighlight}>Hỏi ngay!</span>
             </h3>
             
             <p className={styles.contactText}>
-              Đội ngũ TingVote luôn sẵn sàng hỗ trợ bạn 24/7
+              Đội ngũ TingVote và cộng đồng Creator Lab luôn sẵn sàng hỗ trợ bạn 24/7
             </p>
 
             <div className={styles.contactActions}>
               <motion.button
                 className={styles.contactButton}
                 onClick={handleContactClick}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Đăng ký và hỏi ngay</span>
-                <ExternalLink size={16} />
+                <Gift size={24} />
+                <div className={styles.contactButtonContent}>
+                  <span className={styles.contactButtonMain}>ĐĂNG KÝ NGAY</span>
+                  <span className={styles.contactButtonSub}>Nhận Gói 39 Triệu & Hỏi Trực Tiếp</span>
+                </div>
+                <ExternalLink size={20} />
               </motion.button>
 
               <div className={styles.contactInfo}>
                 <Mail size={16} />
-                <span>contact@tingvote.com</span>
+                <span>Hoặc email: contact@tingvote.com</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
-import Introduction from '@/components/Introduction/Introduction'
 import Benefits from '@/components/Benefits/Benefits'
 import Steps from '@/components/Steps/Steps'
 import FAQ from '@/components/FAQ/FAQ'
@@ -15,12 +14,7 @@ export default function Home() {
         {/* 1. Móc câu: Lợi ích lớn nhất đập vào mắt */}
         <Hero />
         
-        {/* 2. Giải thích: Đây là cái gì? */}
-        <section id="introduction">
-          <Introduction />
-        </section>
-        
-        {/* 3. Lợi ích: Tại sao tôi nên tham gia? */}
+        {/* 2. Giới thiệu & Lợi ích: Gộp chung - Giải thích Creator Lab & Chứng minh gói 39.5 Triệu */}
         <section id="benefits">
           <Benefits />
         </section>
@@ -35,10 +29,6 @@ export default function Home() {
           <FAQ />
         </section>
         
-        {/* 6. Chuyển đổi: 
-             GỘP 2 MỤC CTA & Registration làm MỘT. 
-             Mục này chứa Form và là lời kêu gọi hành động cuối cùng.
-        */}
         <Registration /> 
         
         <Footer />

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Gift } from 'lucide-react';
+import { ArrowRight, Gift } from 'lucide-react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
@@ -11,7 +12,7 @@ const Hero: React.FC = () => {
   };
 
   const handleLearnMoreClick = () => {
-    const element = document.getElementById('introduction');
+    const element = document.getElementById('benefits');
     if (element) {
       const headerHeight = window.innerWidth <= 768 ? 70 : 80;
       const elementPosition = element.offsetTop - headerHeight - 10;
@@ -73,49 +74,85 @@ const Hero: React.FC = () => {
       </div>
 
       <div className={styles.container}>
-        {/* Main Content */}
+        {/* LỚP 1: TRUST BAR - Thanh Uy Tín */}
+        <motion.div 
+          className={styles.trustBar}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className={styles.trustBarLeft}>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/Image/logo/LOGO_TPA.png.png" 
+                alt="TPA Logo" 
+                width={220}
+                height={120}
+                className={styles.trustLogo}
+              />
+            </div>
+            <div className={styles.logoDivider}></div>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/Image/logo/logo_hhsvhbvns.png" 
+                alt="Hoa Hậu Sinh Viên Hòa Bình VN Logo" 
+                width={120}
+                height={60}
+                className={styles.trustLogos}
+              />
+            </div>
+          </div>
+          <div className={styles.trustBarRight}>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/Image/logo/logo TingVote.png" 
+                alt="TingVote Logo" 
+                width={150}
+                height={60}
+                className={styles.trustLogo}
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* LỚP 2: HOOK BLOCK - Khối Sát Thủ */}
         <div className={styles.heroContent}>
           <motion.h1 
             className={styles.title}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Đăng Ký{' '}
-            <span className={styles.highlight}>Creator Labs</span>{' '}
-            Ngay
-          </motion.h1>
-
-          <motion.p 
-            className={styles.subtitle}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Sáng Tạo Nội Dung - Nhận Thưởng Không Giới Hạn!
-          </motion.p>
+            TRỞ THÀNH{' '}
+            <span className={styles.highlight}>CREATOR</span>{' '}
+            CỦA TINGVOTE
+          </motion.h1>
 
-          <motion.div 
-            className={styles.description}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.h2 
+            className={styles.mainHook}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <p>
-              Đăng ký ngay để nhận <strong className={styles.reward}>thưởng 50.000đ</strong> (dành cho thí sinh đã tham gia các cuộc thi & sự kiện trên TingVote.com)
-            </p>
-            <p>
-              <strong className={styles.highlight}>🏆 Phần thưởng hàng tuần cực hấp dẫn</strong> cho những creator xuất sắc nhất! 
-              Cùng với cơ chế chia thưởng <strong className={styles.percentage}>20% doanh thu</strong> từ lượt vote trả phí.
-            </p>
-          </motion.div>
+            Nhận ngay Gói Quyền Lợi Độc Quyền trị giá{' '}
+            <span className={styles.priceHighlight}>39.500.000 VNĐ</span>
+          </motion.h2>
+
+          <motion.h3 
+            className={styles.subHook}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Cùng cơ chế chia thưởng <span className={styles.percentage}>20% DOANH THU</span> không giới hạn từ lượt vote.
+          </motion.h3>
 
           {/* CTA Buttons */}
           <motion.div 
             className={styles.actions}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
               className={styles.primaryButton}
@@ -123,9 +160,13 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Gift size={20} />
-              <span>Đăng ký Nhận Thưởng Ngay</span>
-              <ArrowRight size={18} />
+              <div className={styles.buttonIcon}>
+                <Gift size={24} />
+              </div>
+              <div className={styles.buttonContent}>
+                <span className={styles.buttonMain}>ĐĂNG KÝ NGAY</span>
+                <span className={styles.buttonSub}>Nhận Gói 39 Triệu</span>
+              </div>
             </motion.button>
 
             <motion.button
@@ -134,9 +175,42 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Play size={18} />
-              <span>Tìm hiểu quy trình tham gia</span>
+              <ArrowRight size={18} />
+              <span>Xem chi tiết Gói Quyền Lợi</span>
             </motion.button>
+          </motion.div>
+
+          {/* LỚP 3: TRUST BADGE - Thanh Giải Thích */}
+          <motion.div 
+            className={styles.trustBadge}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <div className={styles.trustBadgeContent}>
+              <span className={styles.trustBadgeText}>Một nền tảng thuộc hệ sinh thái</span>
+              <div className={styles.trustBadgeLogosRow}>
+                <div className={styles.trustBadgeLogoWrapper}>
+                  <Image 
+                    src="/Image/logo/trustlabs-logos.png" 
+                    alt="TrustLabs" 
+                    width={120}
+                    height={40}
+                    className={styles.trustBadgeLogo}
+                  />
+                </div>
+                <span className={styles.trustBadgeText}>, phát triển bởi</span>
+                <div className={styles.trustBadgeLogoWrapper}>
+                  <Image 
+                    src="/Image/logo/tingnect-logo.png" 
+                    alt="TingNect" 
+                    width={120}
+                    height={40}
+                    className={styles.trustBadgeLogo}
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -207,14 +207,14 @@ const Header = () => {
                 boxShadow: "0 12px 30px rgba(231, 200, 115, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
-              title="Đăng ký nhận thưởng 50K ngay"
+              title="Đăng ký nhận Gói 39 Triệu ngay"
             >
-              <UserPlus size={18} />
+              <Gift size={18} />
               <span className={styles.ctaText}>
-                <span className={styles.ctaTextDesktop}>Đăng ký nhận thưởng</span>
-                <span className={styles.ctaTextMobile}>Nhận Thưởng</span>
+                <span className={styles.ctaTextDesktop}>Nhận Gói 39 Triệu</span>
+                <span className={styles.ctaTextMobile}>39 Triệu</span>
               </span>
-              <div className={styles.ctaBadge}>50K</div>
+              <div className={styles.ctaBadge}>MIỄN PHÍ</div>
             </motion.button>
 
             {/* Mobile Menu Button */}
@@ -298,22 +298,22 @@ const Header = () => {
                   transition={{ delay: 0.4 }}
                 >
                   <div className={styles.mobileCtaContent}>
-                    <UserPlus className={styles.mobileCtaIcon} size={24} />
+                    <Gift className={styles.mobileCtaIcon} size={24} />
                     <div className={styles.mobileCtaText}>
-                      <span className={styles.mobileCtaLabel}>Đăng ký Creator Lab</span>
-                      <span className={styles.mobileCtaSubtext}>Nhận thưởng 50.000đ ngay</span>
+                      <span className={styles.mobileCtaLabel}>Đăng ký nhận Gói 39 Triệu</span>
+                      <span className={styles.mobileCtaSubtext}>Miễn phí 100% - Bắt đầu ngay!</span>
                     </div>
                   </div>
                   <div className={styles.mobileCtaBadge}>
                     <Gift size={16} />
-                    <span>50K</span>
+                    <span>39TR</span>
                   </div>
                 </motion.button>
               </nav>
 
               <div className={styles.mobileFooter}>
                 <p className={styles.mobileFooterText}>
-                  ⭐ Đã có 1000+ Creator tin tùng
+                  ⭐ Đã có 87 Creator đăng ký - Còn 13 suất!
                 </p>
               </div>
             </div>
