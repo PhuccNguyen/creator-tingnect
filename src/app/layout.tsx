@@ -4,21 +4,28 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL('https://creator.tingnect.com'),
   title: {
-    default: 'Creator Labs - Chương trình sáng tạo nội dung',
-    template: '%s | Creator Labs'
+    default: 'Creator Lab - Nhận Gói 39 Triệu Miễn Phí | TingNect',
+    template: '%s | Creator Lab TingNect'
   },
-  description: 'Tham gia Creator Labs - Nhận thưởng 50.000đ ngay khi đăng ký. Học kỹ năng tạo nội dung, nhận chia sẻ 20% doanh thu và phần thưởng hàng tuần hấp dẫn.',
+  description: 'Tham gia Creator Lab - Nhận MIỄN PHÍ Gói quyền lợi trị giá 39.5 Triệu: 50K thưởng, 200K vote, hỗ trợ truyền thông 5.95M, voucher giảm 98% tool AI. Chia 20% doanh thu không giới hạn!',
   keywords: [
-    'Creator Labs',
+    'Creator Lab',
     'TingNect',
+    'TingVote',
+    'nhận 39 triệu',
+    'gói creator miễn phí',
     'sáng tạo nội dung',
     'content creator',
     'kiếm tiền online',
-    'chia sẻ doanh thu',
-    'phần thưởng',
-    'video creator',
-    'digital marketing',
-    'social media'
+    'chia sẻ doanh thu 20%',
+    'vote kiếm tiền',
+    'tool AI miễn phí',
+    'Canva Pro',
+    'ChatGPT',
+    'voucher giảm giá',
+    'cộng đồng creator',
+    'làm creator',
+    'thu nhập thụ động'
   ],
   authors: [{ name: 'TingNect Team' }],
   creator: 'TingNect',
@@ -29,15 +36,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://creator.tingnect.com',
-    title: 'Creator Labs - Chương trình sáng tạo nội dung',
-    description: 'Tham gia Creator Labs - Nhận thưởng 50.000đ ngay khi đăng ký. Học kỹ năng tạo nội dung, nhận chia sẻ 20% doanh thu và phần thưởng hàng tuần hấp dẫn.',
-    siteName: 'Creator Labs',
+    title: 'Creator Lab - Nhận Gói 39 Triệu Miễn Phí | TingNect',
+    description: 'Nhận MIỄN PHÍ Gói 39.5 Triệu: Thưởng 50K, 200K vote, hỗ trợ truyền thông 5.95M, voucher 98% tool AI. Chia 20% doanh thu - Kiếm tiền không giới hạn từ nội dung sáng tạo!',
+    siteName: 'Creator Lab - TingNect',
     images: [
       {
-        url: '/Image/logo/tingnect-logo.png',
+        url: '/Image/PreviewSeo/logo_hhsvhbvn.png',
         width: 1200,
         height: 630,
-        alt: 'Creator Labs - TingNect',
+        alt: 'Creator Lab - Nhận Gói 39 Triệu Miễn Phí',
       },
     ],
   },
@@ -45,20 +52,20 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: 'summary_large_image',
-    title: 'Creator Labs - Chương trình sáng tạo nội dung',
-    description: 'Tham gia Creator Labs - Nhận thưởng 50.000đ ngay khi đăng ký. Học kỹ năng tạo nội dung, nhận chia sẻ 20% doanh thu và phần thưởng hàng tuần hấp dẫn.',
-    images: ['/Image/logo/tingnect-logo.png'],
+    title: 'Creator Lab - Nhận Gói 39 Triệu Miễn Phí | TingNect',
+    description: 'Nhận MIỄN PHÍ Gói 39.5 Triệu: Thưởng 50K, 200K vote, hỗ trợ truyền thông 5.95M, voucher 98% tool AI. Chia 20% doanh thu không giới hạn!',
+    images: ['/Image/PreviewSeo/logo_hhsvhbvn.png'],
     creator: '@tingnect',
   },
   
   // Icons
   icons: {
-    icon: '/Image/logo/Icon TingVote.png',
-    shortcut: '/Image/logo/Icon TingVote.png',
-    apple: '/Image/logo/Icon TingVote.png',
+    icon: '/Image/PreviewSeo/tingnecticon.png',
+    shortcut: '/Image/PreviewSeo/tingnecticon.png',
+    apple: '/Image/PreviewSeo/tingnecticon.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/Image/logo/Icon TingVote.png',
+      url: '/Image/PreviewSeo/tingnecticon.png',
     },
   },
   
@@ -141,14 +148,22 @@ export default function RootLayout({
         />
         
         {/* Additional SEO meta tags */}
-        <meta name="theme-color" content="#E7C873" />
-        <meta name="msapplication-TileColor" content="#E7C873" />
+        <meta name="theme-color" content="#F59E0B" />
+        <meta name="msapplication-TileColor" content="#F59E0B" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         
+        {/* Subdomain relationship */}
+        <link rel="canonical" href="https://creator.tingnect.com" />
+        <link rel="alternate" hrefLang="vi" href="https://creator.tingnect.com" />
+        
         {/* Preload important resources */}
-        <link rel="preload" href="/Image/logo/Icon TingVote.png" as="image" />
+        <link rel="preload" href="/Image/PreviewSeo/tingnecticon.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        
+        {/* Parent domain connection */}
+        <meta name="parent-domain" content="tingnect.com" />
+        <meta property="og:site_name" content="TingNect - Creator Lab" />
       </head>
       <body>
         {children}
@@ -159,27 +174,83 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Creator Labs",
-              "alternateName": "TingNect Creator Labs",
+              "@type": "WebSite",
+              "name": "Creator Lab",
+              "alternateName": "TingNect Creator Lab",
               "url": "https://creator.tingnect.com",
-              "logo": "https://creator.tingnect.com/Image/logo/tingnect-logo.png",
-              "description": "Chương trình đào tạo Creator chuyên nghiệp với phần thưởng hấp dẫn",
-              "sameAs": [
-                "https://facebook.com/tingnect",
-                "https://youtube.com/@tingnect",
-                "https://twitter.com/tingnect"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+84-xxx-xxx-xxx",
-                "contactType": "customer service",
-                "availableLanguage": "Vietnamese"
+              "description": "Chương trình Creator Lab - Nhận miễn phí gói quyền lợi trị giá 39.5 triệu VNĐ",
+              "publisher": {
+                "@type": "Organization",
+                "name": "TingNect",
+                "url": "https://tingnect.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://creator.tingnect.com/Image/logo/tingnect-logo.png"
+                },
+                "sameAs": [
+                  "https://facebook.com/tingnect",
+                  "https://youtube.com/@tingnect",
+                  "https://twitter.com/tingnect"
+                ]
               },
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "VN",
-                "addressLocality": "Ho Chi Minh City"
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://creator.tingnect.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
+        
+        {/* Offer Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Offer",
+              "name": "Gói Creator Lab 39.5 Triệu",
+              "description": "Gói quyền lợi Creator Lab miễn phí trị giá 39.5 triệu VNĐ bao gồm thưởng 50K, 200K vote, hỗ trợ truyền thông và voucher giảm 98%",
+              "price": "0",
+              "priceCurrency": "VND",
+              "availability": "https://schema.org/InStock",
+              "url": "https://creator.tingnect.com",
+              "seller": {
+                "@type": "Organization",
+                "name": "TingNect"
+              },
+              "eligibleRegion": {
+                "@type": "Place",
+                "name": "Vietnam"
+              }
+            }),
+          }}
+        />
+        
+        {/* Course Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": "Creator Lab - Chương trình đào tạo Content Creator",
+              "description": "Chương trình đào tạo và hỗ trợ Content Creator với gói quyền lợi 39.5 triệu VNĐ",
+              "provider": {
+                "@type": "Organization",
+                "name": "TingNect",
+                "url": "https://tingnect.com"
+              },
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": "PT2H"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "VND",
+                "availability": "https://schema.org/InStock"
               }
             }),
           }}
