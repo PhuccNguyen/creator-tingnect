@@ -59,7 +59,7 @@ const Benefits: React.FC = () => {
         '✅ Pikbest.com - 10 triệu+ ảnh/template',
         '✅ Lovepik.com - 2.2 triệu+ tài nguyên thiết kế',
         '✅ Capcut Pro - Chỉnh sửa video',
-        '✅ Global GPT - 24 AI đỉnh cao (ChatGPT-4, Claude, Gemini, Copilot, Perplexity...)',
+        '✅ Global GPT - 24 AI đỉnh cao (ChatGPT-4, Claude, Gemini, Copilot, Manus, Perplexity...)',
         '✅ Click AI - Tạo nội dung tự động',
         '✅ 1minAI - Tạo video AI nhanh',
         '✅ Midjourney - Tạo hình ảnh AI đẳng cấp',
