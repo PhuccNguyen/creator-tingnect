@@ -190,20 +190,23 @@ const Hero: React.FC = () => {
             <div className={styles.trustBadgeContent}>
               <span className={styles.trustBadgeText}>Một nền tảng thuộc hệ sinh thái</span>
               <div className={styles.trustBadgeLogosRow}>
+
+
                 <div className={styles.trustBadgeLogoWrapper}>
                   <Image 
-                    src="/Image/logo/trustlabs-logos.png" 
-                    alt="TrustLabs" 
+                    src="/Image/logo/tingnect-logo.png" 
+                    alt="TingNect" 
                     width={120}
                     height={40}
                     className={styles.trustBadgeLogo}
                   />
                 </div>
-                <span className={styles.trustBadgeText}>, phát triển bởi</span>
+
+                <span className={styles.trustBadgeText}>phát triển bởi</span>
                 <div className={styles.trustBadgeLogoWrapper}>
                   <Image 
-                    src="/Image/logo/tingnect-logo.png" 
-                    alt="TingNect" 
+                    src="/Image/logo/trustlabs-logos.png" 
+                    alt="TrustLabs" 
                     width={120}
                     height={40}
                     className={styles.trustBadgeLogo}

@@ -171,7 +171,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin-bottom: 2rem;
   background: linear-gradient(135deg, 
     rgba(244, 247, 250, 0.08) 0%,
@@ -179,37 +179,43 @@
   border: 1px solid rgba(244, 247, 250, 0.15);
   border-radius: 16px;
   backdrop-filter: blur(20px);
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .trustBarLeft,
 .trustBarRight {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
 .logoWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  padding: 0.25rem 0.5rem;
+  height: 28px;
+  padding: 0.15rem 0.25rem;
+  flex-shrink: 0;
 }
 
 .logoWrapperLarge {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
-  padding: 0.25rem 0.5rem;
+  height: 50px;
+  padding: 0.15rem 0.25rem;
+  flex-shrink: 0;
 }
 
 .trustLogo {
   height: 100%;
   width: auto;
+  max-width: 80px;
   object-fit: contain;
   /* Giữ màu gốc - không filter */
   filter: none;
@@ -218,10 +224,10 @@
 }
 
 .trustLogos {
-  height: 6.4rem;
+  height: 80px;
   width: auto;
+  max-width: 90px;
   object-fit: contain;
-  margin-left: 0rem;
   /* Giữ màu gốc - không filter */
   filter: none;
   opacity: 1;
@@ -242,8 +248,9 @@
 
 .logoDivider {
   width: 1px;
-  height: 24px;
+  height: 20px;
   background: rgba(244, 247, 250, 0.2);
+  flex-shrink: 0;
 }
 
 /* LỚP 2: Hero Content - Khối Sát Thủ */
@@ -551,7 +558,7 @@
   }
 
     .trustLogos {
-    height: 10rem;
+    height: 30rem;
     width: auto;
     object-fit: contain;
     margin-left: 1rem;
@@ -566,14 +573,35 @@
     padding: 1rem 2rem;
     flex-wrap: nowrap;
     margin-bottom: 2.5rem;
+    gap: 1rem;
+  }
+
+  .trustBarLeft,
+  .trustBarRight {
+    gap: 1rem;
   }
 
   .logoWrapper {
     height: 42px;
+    padding: 0.25rem 0.5rem;
   }
 
   .logoWrapperLarge {
     height: 90px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .trustLogo {
+    max-width: 120px;
+  }
+
+  .trustLogos {
+    height: 70px;
+    max-width: 90px;
+  }
+
+  .logoDivider {
+    height: 30px;
   }
 
   .title {
@@ -677,8 +705,9 @@
   }
 
   .trustLogos {
-    height: 10rem;
-    width: auto;
+  height: 10rem;
+  width: auto;
+  max-width: 10rem;
     object-fit: contain;
     margin-left: 1rem;
     /* Giữ màu gốc - không filter */

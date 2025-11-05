@@ -1,17 +1,21 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Gift, 
   Rocket,
   Megaphone,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import styles from './Benefits.module.css';
 
 const Benefits: React.FC = () => {
+  const [showAllTools, setShowAllTools] = useState(false);
+  
   const handleRegisterClick = () => {
     window.open('https://forms.gle/H3k58Cj1k7YWpSum9', '_blank');
   };
@@ -38,19 +42,36 @@ const Benefits: React.FC = () => {
       emoji: '📢',
       title: 'Gói Hỗ Trợ Truyền Thông',
       value: '5.950.000 VNĐ',
-      description: 'Creator xuất sắc sẽ được vinh danh và quảng bá trên các kênh media chính thức của TingVote.',
+      description: 'Creator xuất sắc sẽ được hỗ trợ chạy Ads bài đăng có lượt tương tác cao và đưa thông tin lên toàn bộ kênh Social của TingVote & HHSVHBVN.',
       color: '#3B82F6'
     },
     {
       icon: Sparkles,
       emoji: '💎',
-      title: 'Voucher Giảm 98% - Gói Tool AI & Khoá Học',
+      title: 'Bộ Công Cụ Sáng Tạo Nội Dung - FREE',
       value: '33.288.000 VNĐ',
-      description: 'Tặng Voucher giảm 98% để bạn mua gói Tool AI + Khoá học (giá gốc 33.97 triệu) chỉ còn 689K.',
+      description: 'Bạn nhận MIỄN PHÍ (33.288.000 VNĐ/tháng = 1.109.000 VNĐ/ngày) tất cả tài khoản sau:',
       details: [
-        '🎨 Sáng tạo nội dung: Canva Pro, Global GPT (24 AI), Midjourney, Click AI, 1minAI...',
-        '🎬 Giáo dục & Giải trí: ChatGPT, Capcut Pro, Netflix, Spotify, Youtube Premium...',
-        '📚 Kho tài liệu (Tặng): 15.000+ khoá học, 1000+ tài liệu AI, 1 triệu+ tài liệu tổng hợp...'
+        '✅ Canva Pro - Thiết kế chuyên nghiệp',
+        '✅ Canva EDU Pro - Phiên bản giáo dục',
+        '✅ ChatGPT Premium',
+        '✅ Grammarly App - Sửa lỗi tiếng Anh',
+        '✅ Pikbest.com - 10 triệu+ ảnh/template',
+        '✅ Lovepik.com - 2.2 triệu+ tài nguyên thiết kế',
+        '✅ Capcut Pro - Chỉnh sửa video',
+        '✅ Global GPT - 24 AI đỉnh cao (ChatGPT-4, Claude, Gemini, Copilot, Perplexity...)',
+        '✅ Click AI - Tạo nội dung tự động',
+        '✅ 1minAI - Tạo video AI nhanh',
+        '✅ Midjourney - Tạo hình ảnh AI đẳng cấp',
+        '✅ Netflix Premium - Xem phim không giới hạn',
+        '✅ Spotify Premium - Nghe nhạc không quảng cáo',
+        '✅ Youtube Premium - Xem video không quảng cáo',
+        '✅ 15.000+ khóa học online đỉnh cao',
+        '✅ 1.000+ khóa học diễn giả nổi tiếng (cập nhật 2025)',
+        '✅ 1.000+ tài liệu AI chuyên sâu',
+        '✅ 1 triệu+ tài liệu tổng hợp 30 lĩnh vực',
+        '✅ 200GB học liệu chuyên sâu',
+        '💎 Tổng: 33.288.000 VNĐ/tháng'
       ],
       color: '#8B5CF6'
     }
@@ -147,13 +168,47 @@ const Benefits: React.FC = () => {
                   </span>
                   <p className={styles.benefitDescription}>{benefit.description}</p>
                   
-                  {benefit.details && (
+                  {benefit.details && isSpecial ? (
+                    <div className={styles.toolsPackage}>
+                      <div className={styles.packageBadge}>
+                        <span className={styles.badgeIcon}>👑</span>
+                        <span className={styles.badgeText}>DÀNH RIÊNG CHO CREATOR</span>
+                      </div>
+                      
+                      <div className={styles.priceHighlight}>
+                        <span className={styles.priceLabel}>Giá trị gói:</span>
+                        <span className={styles.priceAmount}>33.288.000đ/tháng</span>
+                        <span className={styles.priceDaily}>≈ 1.109.600đ/ngày</span>
+                      </div>
+
+                      <ul className={`${styles.benefitDetails} ${showAllTools ? styles.showAll : styles.showPreview}`}>
+                        {benefit.details.map((detail, idx) => (
+                          <motion.li 
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.05 }}
+                          >
+                            {detail}
+                          </motion.li>
+                        ))}
+                      </ul>
+
+                      <button 
+                        className={styles.seeMoreButton}
+                        onClick={() => setShowAllTools(!showAllTools)}
+                      >
+                        <span>{showAllTools ? 'Thu gọn' : 'Xem tất cả công cụ'}</span>
+                        {showAllTools ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                      </button>
+                    </div>
+                  ) : benefit.details ? (
                     <ul className={styles.benefitDetails}>
                       {benefit.details.map((detail, idx) => (
                         <li key={idx}>{detail}</li>
                       ))}
                     </ul>
-                  )}
+                  ) : null}
                 </div>
               </motion.div>
             );
