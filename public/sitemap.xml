@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://creator.tingnect.com/</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2024-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://creator.tingnect.com/" />
+    <image:image>
+      <image:loc>https://creator.tingnect.com/Image/PreviewSeo/tingnecticon.png</image:loc>
+      <image:caption>Creator Lab 2024 - Gói miễn phí 39.338 triệu VNĐ với 33+ AI Tools - TingNect Logo</image:caption>
+      <image:title>TingNect Creator Lab - Logo Tròn</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://creator.tingnect.com/#benefits</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2024-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://creator.tingnect.com/#steps</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2024-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://creator.tingnect.com/#faq</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2024-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://creator.tingnect.com/#registration</loc>
+    <lastmod>2024-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://creator.tingnect.com/api/health</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2024-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.3</priority>
   </url>

@@ -375,13 +375,14 @@ const Benefits: React.FC = () => {
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <div className={styles.tabList}>
+          <div id="benefits-tabs" className={styles.tabList}>
             {tabs.map((tab, index) => {
               const IconComponent = tab.icon;
               const isActive = activeTab === tab.id;
               return (
                 <motion.button
                   key={tab.id}
+                  id={`benefits-tab-${tab.id}`}
                   className={`${styles.tabButton} ${isActive ? styles.tabActive : ''}`}
                   onClick={() => setActiveTab(tab.id)}
                   whileHover={{ y: -3, scale: 1.02 }}
@@ -746,6 +747,7 @@ const Benefits: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.button
+            id="benefits-register-btn"
             className={styles.ctaButton}
             onClick={handleRegisterClick}
             whileHover={{ scale: 1.02, y: -2 }}

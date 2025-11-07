@@ -1,0 +1,79 @@
+/* Tour Button Styles */
+.tourButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+  transition: all 0.3s ease;
+  animation: tourButtonPulse 2s infinite;
+}
+
+.tourButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, #D97706, #B45309);
+}
+
+.tourButton:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  white-space: nowrap;
+}
+
+@keyframes tourButtonPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.7);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .tourButton {
+    bottom: 80px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .icon {
+    font-size: 14px;
+  }
+}
+
+/* Animation for first-time visitors */
+.tourButton.firstTime {
+  animation: tourButtonBounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes tourButtonBounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}

@@ -2,14 +2,21 @@
 User-agent: *
 Allow: /
 
-# Important pages
+# Important pages for SEO
+Allow: /Image/
 Allow: /api/health
-Allow: /Image/logo/
 
-# Disallow admin or private areas
+# Disallow private areas to prevent crawling
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /.well-known/
+
+# Crawl delay for politeness
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://creator.tingnect.com/sitemap.xml
+
+# Additional sitemaps
+Sitemap: https://creator.tingnect.com/sitemap-images.xml

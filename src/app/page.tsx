@@ -5,6 +5,8 @@ import Steps from '@/components/Steps/Steps'
 import FAQ from '@/components/FAQ/FAQ'
 import Registration from '@/components/Registration/Registration'
 import Footer from '@/components/Footer/Footer'
+import TourManager from '@/components/OnboardingTour/TourManager'
+import TourButton from '@/components/OnboardingTour/TourButton'
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <Header />
       <main>
         {/* 1. Móc câu: Lợi ích lớn nhất đập vào mắt */}
-        <Hero />
+        <section id="hero-section">
+          <Hero />
+        </section>
         
         {/* 2. Giới thiệu & Lợi ích: Gộp chung - Giải thích Creator Lab & Chứng minh gói 39.5 Triệu */}
         <section id="benefits">
@@ -29,9 +33,15 @@ export default function Home() {
           <FAQ />
         </section>
         
-        <Registration /> 
+        <section id="registration">
+          <Registration /> 
+        </section>
         
         <Footer />
+        
+        {/* Tour Components */}
+        <TourManager />
+        <TourButton />
       </main>
     </>
   )
