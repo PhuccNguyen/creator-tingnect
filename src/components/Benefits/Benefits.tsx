@@ -62,7 +62,7 @@ const Benefits: React.FC = () => {
       timeframe: "1 ngày"
     },
     2: {
-      title: "Level 2: Kết Nối Cộng Đồng",
+      title: "Level 2: Creator Tiềm Năng",
       shortTitle: "Kết Nối",
       emoji: "🤝",
       category: "Xây Dựng",
@@ -76,7 +76,7 @@ const Benefits: React.FC = () => {
       timeframe: "3-5 ngày"
     },
     3: {
-      title: "Level 3: Content Creator",
+      title: "Level 3: Creator Sáng Tạo",
       shortTitle: "Creator",
       emoji: "📹",
       category: "Sáng Tạo",
@@ -90,7 +90,7 @@ const Benefits: React.FC = () => {
       timeframe: "1 tuần"
     },
     4: {
-      title: "Level 4: Viral Starter",
+      title: "Level 4: Creator Vàng",
       shortTitle: "Viral Starter",
       emoji: "🔥",
       category: "Lan Tỏa",
@@ -104,7 +104,7 @@ const Benefits: React.FC = () => {
       timeframe: "1-2 tuần"
     },
     5: {
-      title: "Level 5: Content Machine",
+      title: "Level 5: Creator Bạch Kim",
       shortTitle: "Content Machine",
       emoji: "⚡",
       category: "Chuyên Nghiệp",
@@ -118,7 +118,7 @@ const Benefits: React.FC = () => {
       timeframe: "1 tháng"
     },
     6: {
-      title: "Level 6: Influencer Pro",
+      title: "Level 6: Creator Kim Cương",
       shortTitle: "Influencer Pro",
       emoji: "💎",
       category: "Ảnh Hưởng",
@@ -176,7 +176,7 @@ const Benefits: React.FC = () => {
     10: {
       title: "Level 10: 👑Miss Creator",
       shortTitle: "Miss Creator",
-      emoji: "👸",
+      emoji: "🏆",
       category: "Hoàng Gia",
       requirement: "Top 1 Creator của mùa",
       task: "🏆 Danh hiệu ĐỈNH CAO theo MÙA/SỰ KIỆN (không reset hàng tuần).<br/><br/>Để đạt Level 10, Creator cần:<br/>• <strong>Top 1</strong> doanh thu <strong>vote trả phí</strong> trong <strong>MÙA/SỰ KIỆN</strong> (toàn thời gian mùa)<br/>• Tối thiểu <strong>150,000 vote trả phí</strong> trong mùa (150.000.000đ)<br/>• <strong>20 posts/videos</strong> trong mùa (đầy đủ tag + hashtag + link)<br/>• <strong>5 collaboration videos</strong> với các Creator khác<br/>• <strong>1 livestream</strong> kêu gọi vote ≥ <strong>45 phút</strong><br/>• Nộp <strong>Media Kit</strong> (avatar, banner, bio, link tổng hợp) & tuân thủ <strong>Brand Guideline</strong><br/>• Gửi toàn bộ link/bằng chứng cho BTC trước khi mùa kết thúc",
