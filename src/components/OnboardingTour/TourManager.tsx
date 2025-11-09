@@ -9,7 +9,7 @@ interface TourManagerProps {
 }
 
 export default function TourManager({ 
-  autoStartDelay = 3000, 
+  autoStartDelay = 2000, 
   tourName = 'creator-lab-onboarding' 
 }: TourManagerProps) {
   const { startNextStep } = useNextStep()
@@ -18,22 +18,37 @@ export default function TourManager({
     // Kiểm tra xem user đã xem tour chưa
     const hasSeenTour = localStorage.getItem('creator-lab-tour-completed')
     
-    // Kiểm tra xem đây có phải lần đầu tiên visit page không
-    const isFirstVisit = !localStorage.getItem('creator-lab-visited')
+    // Force tour mỗi lần vào trang để test
+    const isFirstTime = !hasSeenTour
     
-    if (!hasSeenTour && isFirstVisit) {
-      // Đánh dấu là đã visit
-      localStorage.setItem('creator-lab-visited', 'true')
-      
-      // Đợi page load xong rồi mới bắt đầu tour
-      const timer = setTimeout(() => {
-        // Kiểm tra lại một lần nữa trước khi start
-        const stillNotSeen = !localStorage.getItem('creator-lab-tour-completed')
-        if (stillNotSeen) {
+    if (isFirstTime) {
+      // Đợi DOM render hoàn toàn
+      const checkAndStart = () => {
+        // Kiểm tra các element cần thiết đã có chưa
+        const heroCtaBtn = document.querySelector('[data-tour="hero-cta"]')
+        const benefitsSection = document.querySelector('[data-tour="benefits-section"]')
+        const tabButtons = document.querySelector('[data-tour="benefits-tabs"]')
+        
+        if (heroCtaBtn && benefitsSection && tabButtons) {
+          console.log('🎯 Starting Creator Lab tour...', { 
+            heroCtaBtn: !!heroCtaBtn,
+            benefitsSection: !!benefitsSection, 
+            tabButtons: !!tabButtons
+          })
           startNextStep(tourName)
+        } else {
+          console.log('⏳ Waiting for tour elements...', { 
+            heroCtaBtn: !!heroCtaBtn,
+            benefitsSection: !!benefitsSection, 
+            tabButtons: !!tabButtons
+          })
+          // Nếu chưa có thì đợi thêm
+          setTimeout(checkAndStart, 500)
         }
-      }, autoStartDelay)
-
+      }
+      
+      // Bắt đầu sau delay
+      const timer = setTimeout(checkAndStart, autoStartDelay)
       return () => clearTimeout(timer)
     }
   }, [startNextStep, autoStartDelay, tourName])
@@ -51,21 +66,73 @@ export default function TourManager({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [startNextStep, tourName])
 
-  // Helper function để tự động switch tab khi tour focus
+  // Helper function để tự động switch tab và focus elements
   useEffect(() => {
-    const handleTourTabSwitch = () => {
-      // Lắng nghe NextStep events để auto-switch tabs
-      const observer = new MutationObserver((mutations) => {
+    let observer: MutationObserver | null = null
+
+    const setupTourEnhancements = () => {
+      // Enhanced tour behaviors
+      observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          if (mutation.type === 'attributes') {
             const element = mutation.target as HTMLElement
+            
+            // Xử lý khi element được highlight
             if (element.classList.contains('nextstep-target')) {
-              // Kiểm tra nếu element là tab button
+              console.log('🎯 Tour targeting:', element.id || element.className)
+              
+              // Auto-click tab buttons
               if (element.id?.startsWith('benefits-tab-')) {
                 const tabId = parseInt(element.id.replace('benefits-tab-', ''))
-                // Tự động click vào tab để switch nội dung
+                console.log(`🔄 Auto-switching to tab ${tabId}`)
+                
                 setTimeout(() => {
                   element.click()
+                  // Đảm bảo scroll vào view
+                  element.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                  })
+                }, 200)
+              }
+              
+              // Enhanced focus cho hero CTA button
+              if (element.id === 'hero-cta-button') {
+                setTimeout(() => {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                  })
+                  // Thêm tour focus class
+                  element.classList.add('tour-focused')
+                  setTimeout(() => {
+                    element.classList.remove('tour-focused')
+                  }, 3000)
+                }, 200)
+              }
+
+              // Enhanced focus cho register button
+              if (element.id === 'benefits-register-btn') {
+                setTimeout(() => {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                  })
+                  // Thêm tour focus class
+                  element.classList.add('tour-focused')
+                  setTimeout(() => {
+                    element.classList.remove('tour-focused')
+                  }, 3000)
+                }, 200)
+              }
+
+              // Auto-scroll to section
+              if (element.getAttribute('data-tour')) {
+                setTimeout(() => {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                  })
                 }, 300)
               }
             }
@@ -73,19 +140,22 @@ export default function TourManager({
         })
       })
 
-      // Observe changes trên body
+      // Observe với enhanced options
       observer.observe(document.body, {
         attributes: true,
         subtree: true,
-        attributeFilter: ['class']
+        attributeFilter: ['class', 'data-tour'],
+        childList: true
       })
-
-      return () => observer.disconnect()
     }
 
-    // Chờ DOM load xong
-    const timer = setTimeout(handleTourTabSwitch, 1000)
-    return () => clearTimeout(timer)
+    // Setup after DOM ready
+    const timer = setTimeout(setupTourEnhancements, 1000)
+    
+    return () => {
+      clearTimeout(timer)
+      observer?.disconnect()
+    }
   }, [])
 
   return null

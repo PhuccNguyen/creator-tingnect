@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
   }));
 
   return (
-    <section className={styles.hero}>
+    <section id="hero-section" className={styles.hero} data-tour="hero-section">
       {/* Background Elements */}
       <div className={styles.heroBackground}>
         <div className={styles.gradientOrb1}></div>
@@ -155,10 +155,12 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
+              id="hero-cta-button"
               className={styles.primaryButton}
               onClick={handleRegisterClick}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
+              data-tour="hero-cta"
             >
               <div className={styles.buttonIcon}>
                 <Gift size={24} />

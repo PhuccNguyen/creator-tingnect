@@ -10,21 +10,21 @@ const tourSteps: Tour[] = [
     tour: 'creator-lab-onboarding',
     steps: [
       {
-        icon: '🎉',
-        title: 'Chào mừng đến Creator Lab!',
-        content: 'Đây là nơi bạn có thể nhận MIỄN PHÍ gói quyền lợi trị giá 39.338 triệu VNĐ để khởi đầu hành trình Content Creator của mình.',
-        selector: '#hero-section',
+        icon: '🚀',
+        title: 'Bắt đầu hành trình Creator ngay!',
+        content: 'Đây là nút đăng ký quan trọng nhất! Click vào đây để điền form và nhận MIỄN PHÍ gói Creator Lab trị giá 39.338 triệu VNĐ. Hãy bắt đầu ngay để không bỏ lỡ cơ hội!',
+        selector: '[data-tour="hero-cta"]',
         side: 'bottom',
         showControls: true,
         showSkip: true,
-        pointerPadding: 10,
-        pointerRadius: 8,
+        pointerPadding: 15,
+        pointerRadius: 12,
       },
       {
-        icon: '�',
+        icon: '🎁',
         title: 'Đăng ký ngay để nhận quyền lợi!',
-        content: 'Đây là nút đăng ký quan trọng nhất! Click vào đây để điền form và nhận MIỄN PHÍ gói Creator Lab trị giá 39.338 triệu VNĐ.',
-        selector: '#benefits-register-btn',
+        content: 'Cuối trang cũng có nút đăng ký tương tự. Bạn có thể click vào đây để điền form và nhận MIỄN PHÍ gói Creator Lab trị giá 39.338 triệu VNĐ sau khi xem hết các quyền lợi.',
+        selector: '[data-tour="benefits-register"]',
         side: 'top',
         showControls: true,
         showSkip: true,
@@ -35,7 +35,7 @@ const tourSteps: Tour[] = [
         icon: '📋',
         title: 'Khám phá 4 hệ thống thưởng',
         content: 'Click vào các tab này để xem chi tiết từng hệ thống: Creator Lab (39.338M), Level System (245M), Weekly Champion (39M), và Hoa Hồng 20%.',
-        selector: '#benefits-tabs',
+        selector: '[data-tour="benefits-tabs"]',
         side: 'bottom',
         showControls: true,
         showSkip: true,
@@ -46,7 +46,7 @@ const tourSteps: Tour[] = [
         icon: '💎',
         title: 'Creator Lab - Gói công cụ AI',
         content: 'Tab đầu tiên: Nhận MIỄN PHÍ 33+ công cụ AI và design pro như ChatGPT Premium, Canva Pro, Midjourney... trị giá 39.338M!',
-        selector: '#benefits-tab-0',
+        selector: '[data-tour="benefits-tab-0"]',
         side: 'bottom',
         showControls: true,
         showSkip: true,
@@ -57,7 +57,7 @@ const tourSteps: Tour[] = [
         icon: '🏆',
         title: 'Hệ thống Level - 11 cấp độ',
         content: 'Tab thứ hai: Hệ thống 11 level với tổng thưởng 245M. Từ Level 0 đến Miss Creator, mỗi cấp có thưởng riêng!',
-        selector: '#benefits-tab-1',
+        selector: '[data-tour="benefits-tab-1"]',
         side: 'bottom',
         showControls: true,
         showSkip: true,
@@ -68,7 +68,7 @@ const tourSteps: Tour[] = [
         icon: '👑',
         title: 'Weekly Champion - Giải tuần',
         content: 'Tab thứ ba: Mỗi tuần có 1 người thắng lớn! Top 1 vote sẽ nhận 39M gồm gói AI, PR và nhiều quyền lợi khác.',
-        selector: '#benefits-tab-2',
+        selector: '[data-tour="benefits-tab-2"]',
         side: 'top',
         showControls: true,
         showSkip: true,
@@ -79,7 +79,7 @@ const tourSteps: Tour[] = [
         icon: '💰',
         title: 'Hoa hồng 20% - Thu nhập thụ động',
         content: 'Tab cuối: Nhận 20% hoa hồng KHÔNG GIỚI HẠN từ mọi vote trả phí. Càng nhiều vote, càng nhiều tiền mặt hàng tuần! Bạn đã khám phá xong tất cả quyền lợi. Hãy đăng ký ngay!',
-        selector: '#benefits-tab-3',
+        selector: '[data-tour="benefits-tab-3"]',
         side: 'top',
         showControls: true,
         showSkip: true,
@@ -93,12 +93,13 @@ const tourSteps: Tour[] = [
 export const metadata: Metadata = {
   metadataBase: new URL('https://creator.tingnect.com'),
   title: {
-    default: 'Creator Lab - Nhận MIỄN PHÍ 39.338 Triệu VNĐ + Thu nhập 20% | TingNect',
-    template: '%s | Creator Lab TingNect'
+    default: 'TingVote Creator Lab - Nhận MIỄN PHÍ 39.338 Triệu VNĐ + Thu nhập 20%',
+    template: '%s | TingVote Creator Lab'
   },
   description: '🔥 CREATOR LAB 2025 - Nhận MIỄN PHÍ gói 39.338 Triệu: 33+ AI Tools (ChatGPT, Canva Pro, Midjourney), Level System 245M, Weekly Champion 39M + Thu nhập 20% không giới hạn từ vote!',
   keywords: [
     'Creator Lab',
+    'TingVote Creator Lab',
     'TingNect',
     'TingVote', 
     'nhận 39.338 triệu miễn phí',
@@ -129,15 +130,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://creator.tingnect.com',
-    title: '🔥 Creator Lab 2024 - MIỄN PHÍ 39.338 Triệu + Thu nhập 20%',
+    title: '🔥 TingVote Creator Lab - MIỄN PHÍ 39.338 Triệu + Thu nhập 20%',
     description: '🎁 NHẬN NGAY: 33+ AI Tools (ChatGPT Premium, Canva Pro, Midjourney) + Level System 245M + Weekly Champion 39M + Hoa hồng 20% không giới hạn! Đăng ký miễn phí 100%',
-    siteName: 'Creator Lab - TingNect',
+    siteName: 'TingVote Creator Lab - TingNect',
     images: [
       {
         url: 'https://creator.tingnect.com/Image/PreviewSeo/tingnecticon.png',
         width: 1200,
         height: 630,
-        alt: 'Creator Lab 2024 - Nhận miễn phí 39.338 triệu VNĐ và 33+ AI Tools',
+        alt: 'TingVote Creator Lab - Nhận miễn phí 39.338 triệu VNĐ và 33+ AI Tools',
         type: 'image/png',
       },
     ],
@@ -146,7 +147,7 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: 'summary_large_image',
-    title: '🔥 Creator Lab 2024 - MIỄN PHÍ 39.338 Triệu + Thu nhập 20%',
+    title: '🔥 TingVote Creator Lab 2024 - MIỄN PHÍ 39.338 Triệu + Thu nhập 20%',
     description: '🎁 33+ AI Tools + Level System 245M + Weekly 39M + Hoa hồng 20% không giới hạn. Đăng ký miễn phí 100%!',
     images: ['https://creator.tingnect.com/Image/PreviewSeo/tingnecticon.png'],
     creator: '@tingnect',
@@ -333,8 +334,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Course",
-              "name": "Creator Lab 2024 - Chương trình Content Creator toàn diện",
-              "description": "Chương trình Creator Lab 2024 - Đào tạo Content Creator chuyên nghiệp với 39.338 triệu VNĐ quyền lợi, 33+ AI Tools và thu nhập 20%",
+              "name": "TingVote Creator Lab - Chương trình Content Creator toàn diện",
+              "description": "Chương trình TingVote Creator Lab - Đào tạo Content Creator chuyên nghiệp với 39.338 triệu VNĐ quyền lợi, 33+ AI Tools và thu nhập 20%",
               "provider": {
                 "@type": "Organization",
                 "name": "TingNect",
@@ -362,8 +363,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Product",
-              "name": "Creator Lab 2024",
-              "description": "Gói Creator Lab miễn phí 39.338 triệu VNĐ với 33+ AI Tools và thu nhập 20%",
+              "name": "TingVote Creator Lab",
+              "description": "Gói TingVote Creator Lab miễn phí 39.338 triệu VNĐ với 33+ AI Tools và thu nhập 20%",
               "image": "https://creator.tingnect.com/Image/PreviewSeo/tingnecticon.png",
               "brand": {
                 "@type": "Brand",
@@ -401,10 +402,10 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Creator Lab có miễn phí 100% không?",
+                  "name": "TingVote Creator Lab có miễn phí 100% không?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Có! Creator Lab 2024 hoàn toàn MIỄN PHÍ 100%. Bạn sẽ nhận được gói quyền lợi trị giá 39.338 triệu VNĐ bao gồm 33+ AI Tools và cơ hội thu nhập 20% không cần đóng phí gì."
+                    "text": "Có! TingVote Creator Lab hoàn toàn MIỄN PHÍ 100%. Bạn sẽ nhận được gói quyền lợi trị giá 39.338 triệu VNĐ bao gồm 33+ AI Tools và cơ hội thu nhập 20% không cần đóng phí gì."
                   }
                 },
                 {
@@ -412,12 +413,12 @@ export default function RootLayout({
                   "name": "Gói 39.338 triệu bao gồm những gì?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Gói Creator Lab bao gồm: 33+ AI Tools (ChatGPT Premium, Canva Pro, Midjourney...), Level System với 245M thưởng, Weekly Champion 39M/tuần, Thu nhập 20% không giới hạn từ vote."
+                    "text": "Gói TingVote Creator Lab bao gồm: 33+ AI Tools (ChatGPT Premium, Canva Pro, Midjourney...), Level System với 245M thưởng, Weekly Champion 39M/tuần, Thu nhập 20% không giới hạn từ vote."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Làm sao để tham gia Creator Lab?", 
+                  "name": "Làm sao để tham gia TingVote Creator Lab?", 
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Chỉ cần 3 bước đơn giản: 1) Điền form đăng ký trên website, 2) Chờ team xét duyệt, 3) Nộp thông tin ngân hàng để nhận thanh toán. Hoàn toàn miễn phí!"
@@ -450,7 +451,7 @@ export default function RootLayout({
                 "https://twitter.com/tingnect"
               ],
               "foundingDate": "2023",
-              "description": "TingNect - Nền tảng hỗ trợ Content Creator Việt Nam với Creator Lab và các công cụ AI miễn phí"
+              "description": "TingNect - Nền tảng hỗ trợ Content Creator Việt Nam với TingVote Creator Lab và các công cụ AI miễn phí"
             }),
           }}
         />
