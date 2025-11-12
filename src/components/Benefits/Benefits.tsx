@@ -42,8 +42,8 @@ const Benefits: React.FC = () => {
     emoji: "📝",
     category: "Khởi Đầu",
     requirement: "Hoàn tất quy trình đăng ký",
-    task: "<strong>Các bước thực hiện:</strong><br/><br/>1. Điền form đăng ký tại <strong>creator.tingnect.com</strong><br/><br/>2. Chờ duyệt hồ sơ từ BTC TingVote<br/><br/>3. Cung cấp <strong>Số Tài Khoản Ngân Hàng</strong> chính chủ để nhận thanh toán<br/><br/>4. Nhận email xác nhận và <strong>Link Vote Cá Nhân</strong>",
-    reward: "✅ Nhận <strong>Link Vote Cá Nhân</strong> để chia sẻ & kêu gọi bình chọn<br/>📊 Theo dõi <strong>Dashboard Doanh Thu</strong> để xem lượt vote và phần thưởng",
+    task: "<strong>Các bước thực hiện:</strong><br/><br/>1. Điền form đăng ký tại <strong>creator.tingnect.com</strong><br/><br/>2. Chờ duyệt hồ sơ từ BTC TingVote<br/><br/>3. Nhận email xác nhận và <strong>Link Vote Cá Nhân</strong>",
+    reward: "✅ Nhận <strong>Link Vote Cá Nhân</strong> để chia sẻ & kêu gọi bình chọn<br/>📊 Theo dõi <strong>Dashboard Doanh Thu</strong> để xem lượt vote và phần thưởng<br/>👥 Tham gia <strong>Community Creator Lab</strong> – hỗ trợ 24/7 từ BTC & cộng đồng<br/>🎯 <strong>Hỗ trợ trực tiếp</strong> từ BTC về quy trình & chiến lược<br/>💡 <strong>Hỗ trợ ý tưởng Content Creator</strong> để tạo nội dung thu hút",
     totalValue: "Kích hoạt tài khoản",
     commission: "20%",
     color: "#64748B"
@@ -53,9 +53,9 @@ const Benefits: React.FC = () => {
   shortTitle: "Bước Đầu Tiên",
   emoji: "🎬",
   category: "Khởi Động",
-  requirement: "Tương tác cơ bản để khởi động hành trình",
-  task: "<strong>Thực hiện các hành động cơ bản để bắt đầu hành trình cùng TingVote:</strong><br/><br/>1. Vào <strong>Fanpage TingVote và Hoa Hậu Sinh Viên Hòa Bình Việt Nam</strong><br/>→ <strong>Like ❤️</strong> và <strong>Comment ✍️</strong> tích cực dưới <strong>1 trong 3 bài post đã ghim</strong><br/>&nbsp;&nbsp;&nbsp;<em>Ví dụ comment: 'Mình vừa tham gia #CreatorLab! Xin chào TingVote! #HoaHauSinhVienHoaBinhVietNam'</em><br/><br/>2. Truy cập <strong>Link Vote cá nhân</strong> (được cấp qua email) và <strong>tự vote 100 vote</strong> để kích hoạt tài khoản<br/>→ <strong>Chụp ảnh màn hình</strong> sau khi hoàn tất.<br/><br/>3. Gửi <strong>ảnh chụp đã tự vote 100 vote</strong> cho <strong>BTC TingVote</strong> qua Fanpage chính thức để được duyệt & thanh toán.<br/><br/>4. <strong>Nhận email xác nhận</strong> tổng phần thưởng <strong>150.000đ</strong>, bao gồm:<br/>&nbsp;&nbsp;&nbsp;• <strong>50.000đ tiền mặt</strong> (thông tin chuyển khoản/xác nhận đã gửi)<br/>&nbsp;&nbsp;&nbsp;• <strong>100 Vote Tặng</strong> (đã cộng vào tài khoản)<br/>&nbsp;&nbsp;&nbsp;• <strong>Link Vote cá nhân</strong> & hướng dẫn hỗ trợ nếu cần",
-  reward: "💰 Nhận <strong>50.000 VNĐ</strong> tiền mặt (chuyển khoản trong 24h)<br/>🎁 Bonus: <strong>100 Vote Tặng</strong>",
+  requirement: "Tương tac cơ bản để khởi động hành trình",
+  task: "<strong>Thực hiện các hành động cơ bản để bắt đầu hành trình cùng TingVote:</strong><br/><br/>1. Vào <strong>Fanpage TingVote và Hoa Hậu Sinh Viên Hòa Bình Việt Nam</strong><br/>→ <strong>Like ❤️</strong> và <strong>Comment ✍️</strong> tích cực dưới <strong>1 trong 3 bài post đã ghim</strong><br/>&nbsp;&nbsp;&nbsp;<em>Ví dụ comment: 'Mình vừa tham gia #CreatorLab! Xin chào TingVote! #HoaHauSinhVienHoaBinhVietNam'</em><br/><br/>2. Truy cập <strong>Link Vote cá nhân</strong> (được cấp qua email) và <strong>vote 100 vote cho chính mình</strong><br/>→ Khi nhấn vote, hệ thống sẽ hiện <strong>QR Code thanh toán</strong><br/>→ <strong>Chụp ảnh màn hình QR Code</strong> này lại (KHÔNG cần chuyển khoản)<br/><br/>3. Gửi <strong>ảnh QR Code vừa chụp</strong> cho <strong>BTC TingVote</strong> qua Fanpage chính thức<br/>→ BTC sẽ <strong>thanh toán giúp bạn 100 vote</strong> (tương đương 100.000đ) để kích hoạt tài khoản<br/><br/>4. <strong>Nhận email xác nhận</strong> tổng phần thưởng <strong>150.000đ</strong>, bao gồm:<br/>&nbsp;&nbsp;&nbsp;• <strong>50.000đ tiền mặt</strong> (chuyển khoản vào tài khoản bạn đã đăng ký)<br/>&nbsp;&nbsp;&nbsp;• <strong>100 Vote</strong> (BTC đã thanh toán giúp, hiển thị trên trang cá nhân)<br/>&nbsp;&nbsp;&nbsp;• <strong>Link Vote cá nhân</strong> chính thức & hướng dẫn hỗ trợ",
+  reward: "💰 Nhận <strong>50.000 VNĐ</strong> tiền mặt (chuyển khoản trong 24h)<br/>🎁 Bonus: <strong>100 Vote</strong> (BTC thanh toán giúp)",
   totalValue: "150.000đ",
   commission: "20%",
   color: "#10B981"
@@ -69,7 +69,7 @@ const Benefits: React.FC = () => {
   emoji: "🤝",
   category: "Xây Dựng",
   requirement: "Kết nối bạn bè, tạo tương tác đầu tiên",
-  task: "<strong>Tạo tương tác cộng đồng:</strong><br/><br/>1. Vào <strong>Fanpage TingVote</strong>, tìm bài đăng chính thức về bạn<br/>&nbsp;&nbsp;&nbsp;<em>(Nếu chưa có, nhờ BTC hỗ trợ đăng)</em><br/><br/>2. <strong>Share công khai</strong> bài đăng đó về trang cá nhân (kèm caption khích lệ)<br/>&nbsp;&nbsp;&nbsp;<em>Ví dụ caption: 'Mình vừa tham gia #CreatorLab cùng #TingVote và #HoaHauSinhVienHoaBinhVietNam! Ủng hộ mình nhé! Link Vote: [điền link vote cá nhân]'</em><br/><br/>3. <strong>Tag 3 người bạn</strong> thân hoặc người ủng hộ vào bài share<br/><br/>4. Đạt tối thiểu <strong>10 tương tác hợp lệ</strong><br/>&nbsp;&nbsp;&nbsp;• Like, Comment hoặc Share<br/>&nbsp;&nbsp;&nbsp;• Tính từ bài post chính thức hoặc bài share của bạn<br/><br/>5. Đạt tối thiểu <strong>150 vote</strong> trên tingvote.com<br/><br/>6. Gửi link bài share cho BTC để được duyệt",
+  task: "<strong>Tạo tương tác cộng đồng:</strong><br/><br/>1. Vào <strong>Fanpage TingVote</strong>, tìm bài đăng chính thức về bạn<br/>&nbsp;&nbsp;&nbsp;<em>(Nếu chưa có, nhờ BTC hỗ trợ đăng)</em><br/><br/>2. <strong>Share công khai</strong> bài đăng đó về trang cá nhân (kèm caption khích lệ)<br/>&nbsp;&nbsp;&nbsp;<em>Ví dụ caption: 'Mình vừa tham gia #CreatorLab cùng #TingVote và #HoaHauSinhVienHoaBinhVietNam! Ủng hộ mình nhé! Link Vote: [điền link vote cá nhân]'</em><br/><br/>3. <strong>Tag 3 người bạn</strong> thân hoặc người ủng hộ vào bài share<br/><br/>4. Đạt tối thiểu <strong>10 tương tác hợp lệ</strong><br/>&nbsp;&nbsp;&nbsp;• Like, Comment hoặc Share<br/>&nbsp;&nbsp;&nbsp;• Tính từ bài post chính thức hoặc bài share của bạn<br/><br/>5. Tổng lượt vote đạt <strong>150 vote</strong> trên tingvote.com<br/>&nbsp;&nbsp;&nbsp;• Bao gồm 100 vote đã có từ Level 1<br/>&nbsp;&nbsp;&nbsp;• Cần thêm <strong>50 vote nữa</strong> (tự mua hoặc kêu gọi bạn bè vote)<br/><br/>6. Gửi link bài share cho BTC để được duyệt",
   reward: "🎁 Nhận <strong>200 Vote Tặng</strong> (tương đương 200.000đ)<br/>🏅 Huy hiệu <strong>'Connector'</strong> – đánh dấu bước đầu tạo ảnh hưởng",
   totalValue: "200.000đ",
   commission: "20%",
@@ -712,7 +712,7 @@ const Benefits: React.FC = () => {
                   Creator Lab
                 </h3>
                 <p className={styles.panelDescription}>
-                  Gói quyền lợi <span className={styles.accent}>39.338 Triệu VNĐ</span> MIỄN PHÍ
+                  Tổng giá trị chương trình <span className={styles.accent}>440+ Triệu VNĐ</span> MIỄN PHÍ
                 </p>
                 
                 <div className={styles.creatorLabInfo}>
@@ -721,23 +721,90 @@ const Benefits: React.FC = () => {
                     <h4>Creator Lab là gì?</h4>
                   </div>
                   <div className={styles.infoContent}>
-                    <p>
+                    <p className={styles.introText}>
                       Chương trình MIỄN PHÍ giúp bạn <strong>tạo nội dung chuyên nghiệp</strong> với 
                       <strong> 33+ AI Tools</strong> và <strong>kiếm thu nhập thực</strong> từ vote trả phí.
                     </p>
-                    
-                    <div className={styles.keyFeatures}>
-                      <div className={styles.feature}>
-                        <span className={styles.featureIcon}>🤖</span>
-                        <div><strong>33+ AI Tools</strong> - ChatGPT Premium, Canva Pro, Midjourney...</div>
+
+                    {/* Contest Prize Banner - PRIORITY */}
+                    <div className={styles.contestPrizeBanner}>
+                      <div className={styles.prizeHeader}>
+                        <Trophy size={20} />
+                        <span className={styles.prizeTitle}>🏆 GIẢI THƯỞNG THÍ SINH</span>
                       </div>
-                      <div className={styles.feature}>
-                        <span className={styles.featureIcon}>💰</span>
-                        <div><strong>Thu nhập 20%</strong> từ mỗi vote trả phí</div>
+                      
+                      {/* Prize List */}
+                      <div className={styles.prizeList}>
+                        <div className={styles.prizeItem}>
+                          <div className={styles.prizeItemHeader}>
+                            <span className={styles.prizeIcon}>🎫</span>
+                            <strong>VÉ VÀNG BÁN KẾT</strong>
+                            <span className={styles.prizeDeadline}>(Trước 30/11)</span>
+                          </div>
+                          <p className={styles.prizeItemDesc}>TOP vote cao nhất → Vào thẳng Bán Kết</p>
+                        </div>
+
+                        <div className={styles.prizeItem}>
+                          <div className={styles.prizeItemHeader}>
+                            <span className={styles.prizeIcon}>👑</span>
+                            <strong>CHUNG CUỘC</strong>
+                            <span className={styles.prizeDeadline}>(Trước 28/12)</span>
+                          </div>
+                          <p className={styles.prizeItemDesc}>"Người đẹp được yêu thích nhất" nhận:</p>
+                          <div className={styles.prizeRewards}>
+                            <div className={styles.rewardItem}>💰 <strong>50 Triệu</strong> (tiền mặt + quà)</div>
+                            <div className={styles.rewardItem}>✈️ <strong>VISA Quốc Tế</strong> (Mỹ/Úc/Canada)</div>
+                            <div className={styles.rewardItem}>🛫 <strong>Sự nghiệp Hàng Không</strong> (khóa 3 tháng + việc làm)</div>
+                          </div>
+                        </div>
                       </div>
-                      <div className={styles.feature}>
-                        <span className={styles.featureIcon}>🎯</span>
-                        <div><strong>Hệ thống Level</strong> với thưởng lên tới 245M</div>
+
+                      <div className={styles.prizeHighlight}>
+                        <div className={styles.prizeValue}>
+                          <Zap size={18} />
+                          <div>
+                            <strong>Vote của bạn</strong> = <span className={styles.prizeAmount}>Đưa bạn lên TOP</span>!
+                          </div>
+                        </div>
+                        <p className={styles.prizeNote}>
+                          💰 <strong>Creator nhận 20% hoa hồng</strong> từ mọi vote + đoạt giải khủng từ các vòng thi khi Top Vote!
+                        </p>
+                      </div>
+
+                      <a 
+                        href="https://hoahausinhvienhoabinh.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={styles.prizeLink}
+                      >
+                        <span>Xem chi tiết phần Thưởng</span>
+                        <ArrowRight size={16} />
+                      </a>
+                    </div>
+
+                    {/* Key Features - Compact Summary */}
+                    <div className={styles.keyFeaturesSummary}>
+                      <div className={styles.summaryTitle}>
+                        <Sparkles size={16} />
+                        <span>Creator Lab bao gồm:</span>
+                      </div>
+                      <div className={styles.featuresList}>
+                        <div className={styles.featureItem}>
+                          <span className={styles.featureBullet}>🤖</span>
+                          <span><strong>33+ AI Tools</strong> miễn phí</span>
+                        </div>
+                        <div className={styles.featureItem}>
+                          <span className={styles.featureBullet}>💰</span>
+                          <span><strong>Hoa hồng 20%</strong> từ vote</span>
+                        </div>
+                        <div className={styles.featureItem}>
+                          <span className={styles.featureBullet}>🎯</span>
+                          <span><strong>Level System</strong> thưởng 245M</span>
+                        </div>
+                        <div className={styles.featureItem}>
+                          <span className={styles.featureBullet}>👑</span>
+                          <span><strong>Weekly Champion</strong> 39M/tuần</span>
+                        </div>
                       </div>
                     </div>
                   
